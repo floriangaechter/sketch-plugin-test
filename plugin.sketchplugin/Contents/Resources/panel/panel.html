@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            background: transparent;
+            overflow: hidden;
+            cursor: default;
+            user-select: none;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body style="-webkit-user-select: none; user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+    <div>
+        <div style="float: left; width: 27.5%; height: 4px; background-color: #FAB117;"></div>
+        <div style="float: left; width: 22.5%; height: 4px; background-color: #F16651;"></div>
+        <div style="float: left; width: 50%; height: 4px; background-color: #5FC8D7;"></div>
+    </div>
+    
+    <div style="width: 40px; height: 40px; line-height: 40px; border-bottom: 1px solid #B8B8B8; text-align: center;">
+        <button style="border: none; background-color: transparent;" id="loginBtn">
+            <img src="lock.svg" alt="">
+        </button>
+    </div>
+    
+    <div style="width: 40px; height: 40px; line-height: 40px; border-bottom: 1px solid #B8B8B8; text-align: center;">
+        <button style="border: none; background-color: transparent;" id="artboardsBtn">
+            <img src="assets.svg" alt="">
+        </button>
+    </div>
+    
+    <div style="width: 40px; height: 40px; line-height: 40px; border-bottom: 1px solid #B8B8B8; text-align: center;">
+        <button style="border: none; background-color: transparent;" id="sourcefilesBtn">
+            <img src="cloud.svg" alt="">
+        </button>
+    </div>
+    
+    <script>
+        // Disable the context menu
+        // document.addEventListener("contextmenu", function(e) {
+        //     e.preventDefault();
+        // });
+        
+        document.getElementById('loginBtn').onclick = function() {
+            window.location.href = 'https://localhost:8080/toggleLoginWindow';
+        }
+        
+        document.getElementById('artboardsBtn').onclick = function() {
+            window.location.href = 'https://localhost:8080/toggleArtboardsWindow';
+        }
+        
+        document.getElementById('sourcefilesBtn').onclick = function() {
+            window.location.href = 'https://localhost:8080/toggleSourcefilesWindow';
+        }
+    </script>
+</body>
+</html>
